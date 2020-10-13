@@ -1,24 +1,21 @@
-# README
+# BLOX - API Ruby on Rails + ReactJS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Para esta versão, foi usado o princípio de MVP. Existem melhorias que podem ser discutidas e implementadas**
 
-Things you may want to cover:
+# Produção
 
-* Ruby version
+A API_BASE está disponível no endereço:
+https://jpierry-api-tasks.herokuapp.com
 
-* System dependencies
+O front-end foi hospedado usando surge.sh e está disponível em:
+http://front_react_tasks.surge.sh
 
-* Configuration
 
-* Database creation
+# Endpoints
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Users:**
+* GET /tasks             ----> Retorna a lista de tarefas cadastradas
+* GET /tasks/:id         ----> Retorna uma tarefa, com base no parâmetro :id (**função não implementada no front-end**)
+* POST /tasks            ----> Cria tarefas com base em dois parâmetros: {"title": "...", "done": boolean} que devem ser enviados no body da requisição.
+* PUT/PATCH /tasks/:id   ----> Atualiza os dados de uma tarefa, com base no parâmetro :id (**implementação no front-end apenas para o campo *"done"***)
+* DELETE /tasks/:id      ----> Deleta uma tarefa, com base no parâmetro :id
